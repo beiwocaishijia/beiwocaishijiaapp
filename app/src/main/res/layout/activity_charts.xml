@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/wallpaperImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.16"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="范围"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/rangeSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="体重趋势"
+                android:textStyle="bold" />
+
+            <com.example.beiwojianshen.ui.chart.LineChartView
+                android:id="@+id/weightChart"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/weightEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="暂无体重数据"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="#33000000" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="动作趋势（当日最大重量）"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/exerciseSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <com.example.beiwojianshen.ui.chart.LineChartView
+                android:id="@+id/strengthChart"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/strengthEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="暂无训练数据"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

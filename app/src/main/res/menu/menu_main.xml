@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_rename_app"
+        android:title="修改名称"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_change_wallpaper"
+        android:title="更换壁纸"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_clear_wallpaper"
+        android:title="清除壁纸"
+        android:showAsAction="never" />
+</menu>
